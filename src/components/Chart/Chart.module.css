@@ -1,0 +1,16 @@
+.br {
+  box-shadow: 0px 0px 2px #292c3a;
+  background-color: #292c3a;
+  height: 31px;
+  width: 60px;
+}
+.upArrow {
+  color: #1fa25c;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.downArrow {
+  color: #f90044;
+  font-size: 18px;
+  margin-right: 10px;
+}

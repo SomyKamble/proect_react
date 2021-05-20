@@ -1,0 +1,11 @@
+.text {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: rgb(148, 149, 157);
+    padding-top: 10px;
+  }
+
+  .text_field {
+    color:rgb(148, 149, 157) !important;
+  }

@@ -1,0 +1,42 @@
+.text {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: rgb(148, 149, 157);
+    padding-top: 10px;
+  }
+
+  .text_field {
+    color:rgb(148, 149, 157) !important;
+    width: 500px;
+}
+
+  .row {
+    display: flex;
+    flex-flow: row;
+    /* justify-content: center; */
+}
+
+/* .content {
+  background-color: rgb(127, 127, 127);
+  color: rgb(127, 127, 127);
+ } */
+
+ .content > tr >th{
+  color: white;
+  background: #3071b9 !important;
+}
+
+#centerstyle {
+  align-items: center !important;
+
+}
+
+button{
+  background: "#21CE99";
+  border: 0;  
+  color: "white";
+  height: 28;
+  width: 150;
+  padding: "0 30px";
+}
