@@ -182,7 +182,7 @@ class ExcelPage extends Component {
       <>
         <div>
           <div style={{ marginTop: "25px" }}>
-            <Upload
+            {/* <Upload
               name="file"
               beforeUpload={this.fileHandler}
               onRemove={() => this.setState({ rows: [] })}
@@ -203,7 +203,7 @@ class ExcelPage extends Component {
               >
                 Attach File here
                 {/* <Links to='/showtable'>SUBMIT</Links> */}
-              </Button>
+              {/* </Button>
               <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
               <a
                 href="https://res.cloudinary.com/bryta/raw/upload/v1562751445/Sample_Excel_Sheet_muxx6s.xlsx"
@@ -213,8 +213,8 @@ class ExcelPage extends Component {
                 style={{ color: "green" }}
               >
                 Sample excel sheet
-              </a>
-            </Upload>
+              </a> */}
+            {/* </Upload> */} 
           </div>
 
           {/* <div style={{ marginTop: 20 }}>
@@ -271,18 +271,18 @@ function TransitionsModal(props) {
   }
 
   return (
-    <div>
+    <div style={{"padding": "0% 0% 0% 42%"}}>
       <button
         type="button"
         onClick={handleOpen}
         // onClick={() => { func1(); func2();}}
         style={{
           "min-height": "40px",
-          width: "30%",
-          backgroundColor: "green",
+          width: "14vw",
+          backgroundColor: "#20a45c",
           fontSize: "17px",
           fontWeight: "600",
-          marginTop: 20,
+          marginTop: '0px',
         }}
       >
         Submit

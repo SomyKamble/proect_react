@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
 
   title: {
     flex: "1 1 100%",
+    fontSize: "20px",
   },
 
   endIcon: {
@@ -58,8 +59,14 @@ const useStyles = makeStyles((theme) => ({
   drop: {
     color: "#bdbbbb",
     backgroundColor: "#141629",
-    marginTop: "40px",
+    marginTop: "76px",
   },
+
+  lineStyle:{
+    "&:hover":{
+      borderBottom: '#44947'
+    },
+  }
 }));
 
 const color = "#008000";
@@ -73,13 +80,29 @@ const theme = createMuiTheme({
     text: { primary: color, secondary: color },
   },
   overrides: {
+    MuiInputBase:{
+      root:{
+        color:'#449474',
+      },
+    },
     MuiInput: {
       underline: {
         "&:before": {
-          borderBottom: `1px solid ${color}`,
+          borderBottom: `1px solid #449474`,
         },
+        "&:hover":{
+          borderBottom: `2px solid #449474`,
+        }
       },
+      placeholder:{
+        opacity:'1px', 
+      }
     },
+    MuiDropzoneArea:{
+      root:{
+        minHeight:'184px'
+      }
+    }
   },
 });
 
@@ -124,6 +147,27 @@ const themes = createMuiTheme({
 //     },
 //   });
 
+const UploadButton = withStyles({
+  root: {
+    boxShadow : 'none',
+    textTransform: 'none',
+    fontSize: '18',
+    borderColor: '#225b54',
+    backgroundColor: '#302c3c',
+    '&:hover': {
+      borderColor: '#225b54',
+      backgroundColor: '#302c3c',
+      boxShadow: 'none',
+    },
+    '&:active': {
+      boxShadow: 'none',
+      borderColor: '#225b54',
+      backgroundColor: '#302c3c',
+    },
+    
+  }
+})(Button);
+
 export default function Form() {
   // const [files, setFiles] = useState([]);
 
@@ -157,11 +201,12 @@ export default function Form() {
           <form className={classes.textfield} noValidate>
             <TextField
               // className={classe.placeholder}
-              label="Enter Dashboard Name"
+              label="Enter Portfolio name"
               variant="standard"
               id="standard-search"
-              inputProps={{ style: { fontSize: 13, color: "white" } }}
+              inputProps={{ style: { fontSize: 11, color: "#585c67" , marginBottom:'10px',  } }}
               InputLabelProps={{ className: classes2.text_field }}
+              className={classes.lineStyle}
             />
             <span>&nbsp;&nbsp;&nbsp;&nbsp; </span>
             <Button
@@ -181,14 +226,34 @@ export default function Form() {
           {/* </Grid>
           </Grid> */}
         </ThemeProvider>
-          
-        {/* <DropzoneAreaBase
+       
+        <DropzoneAreaBase
           dropzoneClass={classes.drop}
+          Icon="disable"
           // onAdd={()=>customMe()}
-          dropzoneText={"Attach or drop file here"}
-
           // onChange={(files) => console.log('Files:', files)}
-        /> */}
+          dropzoneText={
+            <>
+              <UploadButton variant="outlined" style={{marginTop: '3%' ,background: '#302c3c'}}>
+                Attach or drop file here
+              </UploadButton>
+              <Typography variant="body2" style={{marginTop: "2%", color: "#86838B", fontSize: "12px"}}>
+                Use the specified format to successfully submit the file.<br/>
+                <i> <a
+                href="https://res.cloudinary.com/bryta/raw/upload/v1562751445/Sample_Excel_Sheet_muxx6s.xlsx"
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                style={{ color: "#20A45C", textDecoration: "none" }}
+              >
+                Click here
+              </a> </i> to download the sample file.
+              </Typography>
+            </>
+          }
+        >
+        
+        </DropzoneAreaBase>
 
         {/* <ThemeProvider theme={themes}> */}
           <p><ExcelPage/></p>
