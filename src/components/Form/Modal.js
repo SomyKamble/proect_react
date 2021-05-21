@@ -33,7 +33,8 @@ export default function TransitionsModal(props) {
 
   return (
     <div>
-      <button type="button" onClick={handleOpen} style={{ "min-height": "40px", width: "30%",backgroundColor:"green",  fontSize: "17px",fontWeight: "600",marginTop: 20}}>
+      
+      <button type="button" onClick={handleOpen} style={{ "min-height": "40px", width: "30%",backgroundColor:"green", color:"white", fontSize: "17px",fontWeight: "600",marginTop: 20}}>
         Submit
       </button>
       <Modal
@@ -54,7 +55,7 @@ export default function TransitionsModal(props) {
             <p id="transition-modal-description">react-transition-group animates me.</p>
             <div style={{ marginTop: 20 }}>
           <Table dataSource={props.dataSource} columns={props.columns} />
-          <button type="button" onClick={""} style={{ "min-height": "40px", width: "45%",backgroundColor:"green",  fontSize: "17px",fontWeight: "600",marginTop: 20}}>
+          <button type="button" onClick={""} style={{ "min-height": "40px", width: "45%",backgroundColor:"#438c3f",  fontSize: "17px",fontWeight: "600",marginTop: 20}}>
         Submit
       </button>
         </div> 

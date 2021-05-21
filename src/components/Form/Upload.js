@@ -6,6 +6,7 @@ import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 // import classes2 from "./Login.module.css";
 import { Table, Button, Row, Col, Upload } from "antd";
+
 import { DropzoneAreaBase, DropzoneArea } from "material-ui-dropzone";
 import { ExcelRenderer } from "react-excel-renderer";
 // import { getDroppedOrSelectedFiles } from "html5-file-selector";
@@ -196,9 +197,12 @@ class ExcelPage extends Component {
                 style={{
                   "min-height": "40px",
                   width: "30%",
-                  backgroundColor: "green",
-                  fontSize: "17px",
+                  marginLeft:155,
+                  
+                  backgroundColor: "#438c3f",
+                  fontSize: "16px",
                   fontWeight: "600",
+                  borderRadius:"4px"
                 }}
               >
                 Attach File here
@@ -279,10 +283,11 @@ function TransitionsModal(props) {
         style={{
           "min-height": "40px",
           width: "30%",
-          backgroundColor: "green",
-          fontSize: "17px",
+          backgroundColor: "#438c3f",
+          fontSize: "16px",
           fontWeight: "600",
           marginTop: 20,
+          borderRadius:"4px"
         }}
       >
         Submit
@@ -328,10 +333,19 @@ function TransitionsModal(props) {
                   style={{
                     "min-height": "40px",
                     width: "50%",
-                    backgroundColor: "green",
+                    backgroundColor: "#438c3f",
                     fontSize: "17px",
                     fontWeight: "600",
                     marginTop: 20,
+                    padding:"1px",                    
+                    // fontSize: "10px",
+                    
+                    // letter-spacing: 5px,
+                    // color: "rgb(148, 149, 157)",
+                    // padding-top: 10px;
+                    borderRadius:"4px"
+                   
+                    
                   }}
                 >
                   Show Table
@@ -341,10 +355,11 @@ function TransitionsModal(props) {
                   style={{
                     "min-height": "40px",
                     width: "50%",
-                    backgroundColor: "green",
+                    backgroundColor: "#438c3f",
                     fontSize: "17px",
                     fontWeight: "600",
                     marginTop: 20,
+                    borderRadius:"4px"
                   }}
                   className="button"
                   onClick={() => {

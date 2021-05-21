@@ -1,10 +1,15 @@
 import React from "react";
+
 import Container from "@material-ui/core/Container";
+
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import classes2 from "./Form.module.css";
+import StyledDropzone from "./dragandrop"
+
+
 import {
   createMuiTheme,
   MuiThemeProvider,
@@ -32,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
   containerWidth: {
     maxWidth: "1850px",
     marginTop: "10px",
+    
   },
 
   title: {
@@ -164,10 +170,13 @@ export default function Form() {
               InputLabelProps={{ className: classes2.text_field }}
             />
             <span>&nbsp;&nbsp;&nbsp;&nbsp; </span>
-            <Button
+            <Button 
               variant="outlined"
               color="primary"
               style={{ "min-height": "45px", width: "15%" }}
+              classes={{
+                endIcon: classes.endIcon,
+              }}
             >
               <Clock hour12={false} /> IST
             </Button>
@@ -181,7 +190,7 @@ export default function Form() {
           {/* </Grid>
           </Grid> */}
         </ThemeProvider>
-          
+          <StyledDropzone/>
         {/* <DropzoneAreaBase
           dropzoneClass={classes.drop}
           // onAdd={()=>customMe()}
@@ -191,7 +200,7 @@ export default function Form() {
         /> */}
 
         {/* <ThemeProvider theme={themes}> */}
-          <p><ExcelPage/></p>
+         <center> <p><ExcelPage/></p> </center>
           {/* <Button
           className={classes.endIcon}
             variant="contained"

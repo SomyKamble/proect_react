@@ -468,7 +468,18 @@ export default function EnhancedTable() {
     const isAsc = orderBy === property && order === "asc";
     setOrder(isAsc ? "desc" : "asc");
     setOrderBy(property);
-  };
+  };  
+  const newListItem = (props) => {
+    return(
+       // Using Props handleClick as callback function
+             <div>
+                   <p> {props.delta} </p>
+                   
+                   
+              </div>
+    );
+   }
+   
 
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");

@@ -3,6 +3,7 @@ import Table from "./components/Table/Table";
 import Login from "./components/Login/Login";
 import Form from "./components/Form/Form";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Sample from "./components/Form/readexcel"
 // import TablePage from "./components/Form/FormTab";
 
 function App() {

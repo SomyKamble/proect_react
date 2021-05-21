@@ -27,16 +27,8 @@
   background: #3071b9 !important;
 }
 
-#centerstyle {
+container {
   align-items: center !important;
 
 }
 
-button{
-  background: "#21CE99";
-  border: 0;  
-  color: "white";
-  height: 28;
-  width: 150;
-  padding: "0 30px";
-}
